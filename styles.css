@@ -1,4 +1,6 @@
-
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: "Poppins", sans-serif;
 }
@@ -31,13 +33,13 @@ p {
 }
 
 .navbar-brand a:hover{
-    color: rgba(240, 248, 255, 0.744);
+    color: #f0f8ffbe;
 }
 
 .navbar p{
     font-size: 0.8rem;
     font-weight: 600;
-    color: rgba(29, 210, 255, 0.964);
+    color: #1dd2fff6;
 }
 
 .nav-link{
@@ -46,7 +48,7 @@ p {
 }
 
 .nav-link:hover{
-    color: rgb(119, 158, 192);
+    color: #1dd2fff6;
 }
 
 .nav-pills .nav-link.active{
@@ -61,15 +63,100 @@ p {
     bottom: 3px;
     width: 100%;
     height: 2px;
-    background-color: rgb(215, 198, 69);
+    background-color: #f4c95d;
 }
 
 #hero{
     position: relative;
-    background-image: url(/images/hero-bg.jpg);
+    background-image: url(hero-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 40px;
+
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+#hero-text-container{
+    position: relative;
+    z-index: 2;
+    transform: translateY(-45px);
+    
+}
+
+#hero-text-container #eyebrow{
+    color: #f4c95d;
+    letter-spacing: 0.07em;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+#hero-text-container #hero-heading{
+    color: #fdfaf3;
+    margin-top: 0;
+    line-height: 1.05;
+}
+
+#hero-text-container #hero-description{
+    color: #fdfaf3;
+    line-height: 1.6;
+}
+
+.btn.btn-primary-cta{
+    background-color: #e08a3e;
+    border-color: #864711;
+    color: #fdfaf3;
+}
+
+.btn.btn-primary-cta:hover{
+    background-color: #c97530;
+    border-color: #c97530;
+}
+
+.btn.btn-secondary-cta{
+    border-color: #fdfaf3;
+    color: #fdfaf3;
+}
+
+.btn.btn-secondary-cta:hover{
+    border-color: #e08a3e;
+    color: #e08a3e;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 0px;
+  left: 55%;
+  transform: translateX(-60%) translateY(30px);
+  text-align: center;
+  color: white;
+  opacity: .7;
+  font-size: .9rem;
+  letter-spacing: .15rem;
+  font-weight: 500;
+}
+
+.scroll-line {
+  display: block;
+  width: 2px;
+  height: 37px;
+  margin: 6px auto 0;
+  background: white;
 }
 
 h1{
