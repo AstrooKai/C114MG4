@@ -1,4 +1,6 @@
-
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: "Poppins", sans-serif;
 }
@@ -43,13 +45,13 @@ h1{
 }
 
 .navbar-brand a:hover{
-    color: rgba(240, 248, 255, 0.744);
+    color: #f0f8ffbe;
 }
 
 .navbar p{
     font-size: 0.8rem;
     font-weight: 600;
-    color: rgba(29, 210, 255, 0.964);
+    color: #1dd2fff6;
 }
 
 .nav-link{
@@ -58,7 +60,7 @@ h1{
 }
 
 .nav-link:hover{
-    color: rgb(119, 158, 192);
+    color: #1dd2fff6;
 }
 
 .nav-pills .nav-link.active{
@@ -73,9 +75,6 @@ h1{
     bottom: 3px;
     width: 100%;
     height: 2px;
-    background-color: rgb(215, 198, 69);
+    background-color: #f4c95d;
 }
 
-.section {
-    padding-top: 90px;
-}
