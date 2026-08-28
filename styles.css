@@ -8,6 +8,18 @@ p {
     margin: 0;
 }
 
+#hero{
+    position: relative;
+    background-image: url(/images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-family: "Fraunces", serif;
+}
+
 #navbar{
     background-color: rgba(7, 72, 178, 0.6);
     backdrop-filter: blur(3px);
@@ -64,14 +76,6 @@ p {
     background-color: rgb(215, 198, 69);
 }
 
-#hero{
-    position: relative;
-    background-image: url(/images/hero-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-h1{
-    font-family: "Fraunces", serif;
+.section {
+    padding-top: 90px;
 }
