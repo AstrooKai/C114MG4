@@ -10,44 +10,52 @@
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
     <header>
-        <nav id="navbar" class="navbar fixed-top">
-            <div class="container col-12 d-flex flex-column ms-0 ms-lg-3 ps-0 col-lg-3 justify-content-start">
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-lg col-8 d-flex flex-column ms-0 ms-lg-0 pe-5 pe-lg-0 col-lg-3 justify-content-start justify-content-lg-start">
                 <h1 class="navbar-brand active pb-0">
-                    <a href="#hero">EL NIDO</a>
+                    <a href="#hero" class="active pe-5">EL NIDO</a>
                 </h1>
-                <p class="pt-0 ps-4">PALAWAN, PHILIPPINES</p>
+                <p class="pt-0 pe-4">PALAWAN, PHILIPPINES</p>
             </div>
-            <ul class="nav nav-pills col-12 col-lg-8 pe-5 justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="#overview">Overview</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#island-tours">Island & Tours</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#activities">Activities</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Gallery</a>
-                </li>   
-                <li class="nav-item">
-                    <a class="nav-link" href="#plan-your-visit">Plan Your Visit</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="nav nav-pills col-12 pe-0 pe-lg-5 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#island-tours">Island & Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activities">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plan-your-visit">Plan Your Visit</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <section id="hero" class="container-fluid min-vh-100 position-relative">
-            <div class="container position-absolute bottom-0 start-0 pb-5 ps-5 ms-0 ms-lg-5" id="hero-text-container">
+            <div class="container position-absolute bottom-0 start-0 pb-2 ps-5 ms-0 ms-lg-5" id="hero-text-container">
                 <h5 id="eyebrow" class="eyebrow">PALAWAN, PHILIPPINES</h5>
-                <h1 id="hero-heading" class="display-2 display-lg-3 mb-0">
-                    Discover El Nido
+                <h1 id="hero-heading" class="display-2 display-lg-3 fs-sm-1 mb-0">
+                    El Nido, One of a kind
                 </h1>
-                <p id="hero-description" class="col-12 col-lg-6 fs-5 fs-lg-6 pb-4">
-                    Towering limestone cliffs, hidden lagoons, and endless blue seas awaits you here
-                     El Nido feels like a world truly untouched by time. Leave the noise 
-                    behind and discover a paradise where every horizon tells a story.</p>
-                <div class="d-flex gap-3 pb-5">
+                <p id="hero-description" class="col-12 col-lg-8 fs-5 fs-lg-6 pb-2">
+                    Tucked at the northern tip of Palawan, El Nido is the gateway to
+                    the Bacuit Archipelago — a scattering of limestone islands, hidden
+                    lagoons, and powder-white beaches that has made it one of the most
+                    celebrated destinations in the Philippines and Southeast Asia. 
+                    El Nido's been ready for you. Have you been ready for it?
+                </p>
+                <div class="d-flex gap-2 gap-lg-3 pb-5">
                     <a class="btn btn-primary-cta fs-5 fs-lg-4 px-3 py-2 px-lg-4 py-lg-3" href="#overview" role="button">Explore El Nido</a>
                     <a class="btn btn-secondary-cta fs-5 fs-lg-4 px-3 py-2 px-lg-4 py-lg-3" href="#plan-your-visit" role="button">Plan Your Visit</a>
                 </div>
@@ -57,6 +65,7 @@
                 </div>
             </div>
         </section>
+
         <section id="overview" class="container min-vh-100">
             <div class="row d-flex flex-column pb-4">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
