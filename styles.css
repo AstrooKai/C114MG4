@@ -159,11 +159,11 @@ p {
   background: white;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family: "Fraunces", serif;
 }
 
-.icon, .location {
+.icon, .location, .card-title {
     color: #245b93 !important;
 }
 
