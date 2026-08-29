@@ -20,6 +20,10 @@ p {
     color: aliceblue;
 }
 
+.navbar-toggler-icon{
+    filter: brightness(0) invert(1);
+}
+
 .navbar-brand {
     font-weight: bold;
     margin: 0;
@@ -68,7 +72,7 @@ p {
 
 #hero{
     position: relative;
-    background-image: url("./images/hero-bg.jpg");
+    background-image: url(hero-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,8 +86,8 @@ p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
     rgba(0, 0, 0, 0.1) 70%,
     transparent 100%
   );
@@ -119,23 +123,24 @@ p {
 
 .btn.btn-primary-cta{
     background-color: #e08a3e;
-    border-color: #864711;
+    border-color: #e08a3e;
     color: #fdfaf3;
 }
 
 .btn.btn-primary-cta:hover{
     background-color: #c97530;
-    border-color: #c97530;
+    border-color: #864711;
 }
 
 .btn.btn-secondary-cta{
-    border-color: #fdfaf3;
+    background-color: #4A7FB5;
+    border-color: #4A7FB5;
     color: #fdfaf3;
 }
 
 .btn.btn-secondary-cta:hover{
-    border-color: #e08a3e;
-    color: #e08a3e;
+    background-color: #4476a8;
+    border-color: #083274;
 }
 
 .scroll-indicator {
@@ -159,20 +164,6 @@ p {
   background: white;
 }
 
-h1, h2, h3{
+h1{
     font-family: "Fraunces", serif;
-}
-
-.icon, .location {
-    color: #245b93 !important;
-}
-
-.history-text {
-    font-size: 12px;
-}
-
-#overview, #island-tours, 
-#activities, #gallery, 
-#plan-your-visit {
-    padding-top: 90px;
 }
