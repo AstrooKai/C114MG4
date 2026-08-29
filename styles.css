@@ -164,6 +164,20 @@ p {
   background: white;
 }
 
-h1{
+h1, h2, h3, h4{
     font-family: "Fraunces", serif;
+}
+
+.icon, .location, .card-title {
+    color: #245b93 !important;
+}
+
+.history-text {
+    font-size: 12px;
+}
+
+#overview, #island-tours, 
+#activities, #gallery, 
+#plan-your-visit {
+    padding-top: 90px;
 }
