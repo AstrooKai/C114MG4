@@ -469,82 +469,121 @@
         </section>
 
         <!-- Plan Your Visit Section -->
-        <section id="plan-your-visit" class="visit-planning container" aria-labelledby="plan-visit-heading">
+        <section id="plan-your-visit" class="container visit-planning" aria-labelledby="plan-visit-heading">
             <div class="visit-header">
-                <div>
-                    <div class="section-label" id="plan-visit-heading">Plan your visit</div>
-                    <h2>Before you pack the bag or book the flight.</h2>
-                </div>
+                <div class="section-label" id="plan-visit-heading">Plan your visit</div>
+                <h2>Before you pack the bag or book the flight.</h2>
                 <p class="section-intro">A quick list worth five minutes of your time now, so the rest of the trip doesn't come with any surprises.</p>
             </div>
 
-            <div class="tip-box" aria-label="Cash advice">
-                <span class="tip-title">Come Prepared</span>
-                <h3>Cash</h3>
-                <p>Most tour operators, tricycles, and small shops in El Nido run on cash only. Bring enough Philippine pesos to cover your stay — ATMs in town are limited and can run out, especially on weekends and holidays.</p>
-            </div>
-
-            <div id="tips" class="accordion-stack">
-                <details class="accordion-item" open>
-                    <summary>Best Time to Visit</summary>
-                    <div class="accordion-content">
-                        <ul>
-                            <li><strong>Nov–May</strong> (dry season): the sweet spot — calm seas, clear water, tours running as scheduled.</li>
-                            <li><strong>Dec–Feb</strong>: peak season, cooler weather, but busiest and priciest — book early.</li>
-                            <li><strong>Mar–May</strong>: hot but quieter, still solid weather.</li>
-                            <li><strong>Jun–Nov</strong>: monsoon season — cheaper, but expect rain and possible tour cancellations. Only recommended for flexible travelers.</li>
-                        </ul>
+            <div class="visit-grid">
+                <div class="visit-sidebar">
+                    <div class="tip-box" aria-label="Cash advice">
+                        <span class="tip-title">Come Prepared</span>
+                        <h3>Cash</h3>
+                        <p>Most tour operators, tricycles, and small shops in El Nido run on cash only. Bring enough Philippine pesos to cover your stay — ATMs in town are limited and can run out, especially on weekends and holidays.</p>
                     </div>
-                </details>
+                </div>
 
-                <details class="accordion-item">
-                    <summary>Island-Hopping Tours</summary>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Tours run on 4 standardized routes — Tour A, B, C, D — each covering different lagoons, beaches, and snorkeling spots.</li>
-                            <li>Full-day tours, roughly 9 a.m.–5 p.m., lunch included.</li>
-                            <li>Book directly through a tour operator in town or through your accommodation, ideally a day ahead.</li>
-                            <li>Bring cash for extras (kayak rental, entrance fees not included in the tour price).</li>
-                        </ul>
-                    </div>
-                </details>
+                <div class="visit-main">
+                    <div class="accordion accordion-stack" id="tipsAccordion">
+                        <!-- Item 1 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tipOne" aria-expanded="true" aria-controls="tipOne">
+                                    Best Time to Visit
+                                </button>
+                            </h3>
+                            <div id="tipOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body accordion-content">
+                                    <ul>
+                                        <li><strong>Nov–May</strong> (dry season): the sweet spot — calm seas, clear water, tours running as scheduled.</li>
+                                        <li><strong>Dec–Feb</strong>: peak season, cooler weather, but busiest and priciest — book early.</li>
+                                        <li><strong>Mar–May</strong>: hot but quieter, still solid weather.</li>
+                                        <li><strong>Jun–Nov</strong>: monsoon season — cheaper, but expect rain and possible tour cancellations. Only recommended for flexible travelers.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <details class="accordion-item">
-                    <summary>Where to Stay</summary>
-                    <div class="accordion-content">
-                        <ul>
-                            <li><strong>El Nido Town</strong>: most convenient — walk to restaurants, tour offices, and the pier.</li>
-                            <li><strong>Corong-Corong</strong>: quieter beachfront, short tricycle ride from town.</li>
-                            <li><strong>Lio</strong>: upscale, resort-style area.</li>
-                            <li><strong>Nacpan</strong>: remote and low-key, best for travelers who want to escape the crowds.</li>
-                        </ul>
-                    </div>
-                </details>
+                        <!-- Item 2 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipTwo" aria-expanded="false" aria-controls="tipTwo">
+                                    Island-Hopping Tours
+                                </button>
+                            </h3>
+                            <div id="tipTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body accordion-content">
+                                    <ul>
+                                        <li>Tours run on 4 standardized routes — Tour A, B, C, D — each covering different lagoons, beaches, and snorkeling spots.</li>
+                                        <li>Full-day tours, roughly 9 a.m.–5 p.m., lunch included.</li>
+                                        <li>Book directly through a tour operator in town or through your accommodation, ideally a day ahead.</li>
+                                        <li>Bring cash for extras (kayak rental, entrance fees not included in the tour price).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <details class="accordion-item">
-                    <summary>What to Bring</summary>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Reef-safe sunscreen</li>
-                            <li>Reef shoes or grippy sandals</li>
-                            <li>A dry bag for phone, cash, and camera on boat tours</li>
-                            <li>Cash in Philippine pesos</li>
-                            <li>Light, quick-dry clothing</li>
-                        </ul>
-                    </div>
-                </details>
+                        <!-- Item 3 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipThree" aria-expanded="false" aria-controls="tipThree">
+                                    Where to Stay
+                                </button>
+                            </h3>
+                            <div id="tipThree" class="accordion-collapse collapse">
+                                <div class="accordion-body accordion-content">
+                                    <ul>
+                                        <li><strong>El Nido Town</strong>: most convenient — walk to restaurants, tour offices, and the pier.</li>
+                                        <li><strong>Corong-Corong</strong>: quieter beachfront, short tricycle ride from town.</li>
+                                        <li><strong>Lio</strong>: upscale, resort-style area.</li>
+                                        <li><strong>Nacpan</strong>: remote and low-key, best for travelers who want to escape the crowds.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <details class="accordion-item">
-                    <summary>Safety Reminders</summary>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Wear a life vest on every boat tour, even strong swimmers.</li>
-                            <li>Book only licensed, reputable tour operators.</li>
-                            <li>Follow your boat crew's instructions on currents and swimming zones.</li>
-                            <li>Check weather advisories — tours can be rescheduled in rough conditions.</li>
-                        </ul>
+                        <!-- Item 4 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipFour" aria-expanded="false" aria-controls="tipFour">
+                                    What to Bring
+                                </button>
+                            </h3>
+                            <div id="tipFour" class="accordion-collapse collapse">
+                                <div class="accordion-body accordion-content">
+                                    <ul>
+                                        <li>Reef-safe sunscreen</li>
+                                        <li>Reef shoes or grippy sandals</li>
+                                        <li>A dry bag for phone, cash, and camera on boat tours</li>
+                                        <li>Cash in Philippine pesos</li>
+                                        <li>Light, quick-dry clothing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tipFive" aria-expanded="false" aria-controls="tipFive">
+                                    Safety Reminders
+                                </button>
+                            </h3>
+                            <div id="tipFive" class="accordion-collapse collapse">
+                                <div class="accordion-body accordion-content">
+                                    <ul>
+                                        <li>Wear a life vest on every boat tour, even strong swimmers.</li>
+                                        <li>Book only licensed, reputable tour operators.</li>
+                                        <li>Follow your boat crew's instructions on currents and swimming zones.</li>
+                                        <li>Check weather advisories — tours can be rescheduled in rough conditions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </details>
+                </div>
             </div>
         </section>
 
@@ -563,7 +602,7 @@
                         <strong>Explore</strong>
                         <a href="#overview">Overview</a>
                         <a href="#plan-your-visit">Plan your visit</a>
-                        <a href="#tips">Tips</a>
+                        <a href="#tipsAccordion">Tips</a>
                     </div>
                     <div>
                         <strong>Stay connected</strong>
