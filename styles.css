@@ -243,3 +243,167 @@ h1, h2, h3, h4{
     font-weight: 500;
     z-index: 2;
 }
+
+
+#activities > .row:first-child p {
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(20, 83, 90);
+    letter-spacing: 0.02em;
+}
+
+
+.activity-card {
+    position: relative;
+    height: 100%;
+    min-height: 230px;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    border: none;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 18px rgba(15, 61, 62, 0.18);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+.activity-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.6s ease;
+    z-index: 0;
+}
+
+
+.activity-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 61, 62, 0.05) 0%, rgba(15, 61, 62, 0.55) 65%, rgba(15, 61, 62, 0.88) 100%);
+    transition: background 0.35s ease;
+    z-index: 1;
+}
+
+
+.activity-card:hover,
+.activity-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(15, 61, 62, 0.32);
+}
+
+
+.activity-card:hover::before,
+.activity-card:focus-within::before {
+    transform: scale(1.09);
+}
+
+
+.activity-card:hover::after,
+.activity-card:focus-within::after {
+    background: linear-gradient(180deg, rgba(15, 61, 62, 0.15) 0%, rgba(15, 61, 62, 0.72) 55%, rgba(8, 43, 44, 0.94) 100%);
+}
+
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 1.1rem 1rem 1rem;
+    color: #fff;
+    outline: none;
+}
+
+
+.activity-card i {
+    font-size: 1.5rem;
+    color: rgb(46, 196, 182);
+    margin-bottom: 0.5rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(3px);
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
+}
+
+
+.activity-card:hover i,
+.activity-card:focus-within i {
+    transform: translateY(-3px) rotate(-6deg);
+    background: rgb(255, 122, 90);
+    color: #fff;
+}
+
+
+.activity-card h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    position: relative;
+    display: inline-block;
+}
+
+
+.activity-card h3::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: rgb(255, 122, 90);
+    transition: width 0.4s ease;
+    margin-top: 2px;
+}
+
+
+.activity-card:hover h3::after,
+.activity-card:focus-within h3::after {
+    width: 100%;
+}
+
+
+.activity-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease 0.05s;
+}
+
+
+.activity-card:hover p,
+.activity-card:focus-within p {
+    max-height: 4.5rem;
+    opacity: 1;
+}
+
+
+.card-content:focus-visible {
+    box-shadow: inset 0 0 0 3px rgb(255, 122, 90);
+    border-radius: 14px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .activity-card,
+    .activity-card::before,
+    .activity-card::after,
+    .activity-card i,
+    .activity-card h3::after,
+    .activity-card p {
+        transition: none;
+    }
+}
