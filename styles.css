@@ -407,3 +407,238 @@ h1, h2, h3, h4{
         transition: none;
     }
 }
+
+.gallery-section {
+    min-height: 100vh;
+    padding: 80px 20px;
+}
+
+.gallery-heading {
+    margin-bottom: 40px;
+}
+
+.gallery-heading h1 {
+    margin: 0;
+    font-family: "Fraunces", serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.gallery-heading p {
+    margin: 8px 0 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.gallery-item {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 6px;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.35s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    opacity: 0.95;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 4px;
+}
+
+.gallery-modal {
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.gallery-modal .modal-dialog {
+    max-width: 1100px;
+    width: 95%;
+    margin: auto;
+}
+
+.gallery-modal .modal-content {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+#galleryCarousel {
+    width: 100%;
+}
+
+.gallery-modal .carousel-item {
+    text-align: center;
+    padding: 20px 80px 10px;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 72vh;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.lightbox-caption {
+    text-align: center;
+    padding-top: 18px;
+    color: #fff;
+}
+
+.lightbox-caption h2 {
+    margin: 0;
+    font-family: "Fraunces", serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.lightbox-caption p {
+    margin: 6px 0 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.gallery-modal .carousel-control-prev,
+.gallery-modal .carousel-control-next {
+    width: 70px;
+    opacity: 1;
+}
+
+.gallery-modal .carousel-control-prev:hover,
+.gallery-modal .carousel-control-next:hover {
+    opacity: 0.7;
+}
+
+.gallery-modal .carousel-control-prev-icon,
+.gallery-modal .carousel-control-next-icon {
+    width: 45px;
+    height: 45px;
+    background-size: 70% 70%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 60px 20px;
+    }
+
+    .gallery-heading h1 {
+        font-size: 40px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    .gallery-modal .carousel-item {
+        padding: 20px 55px 10px;
+    }
+
+    .lightbox-image {
+        max-height: 65vh;
+    }
+
+    .lightbox-caption h2 {
+        font-size: 24px;
+    }
+
+    .lightbox-caption p {
+        font-size: 13px;
+    }
+
+    .gallery-modal .carousel-control-prev,
+    .gallery-modal .carousel-control-next {
+        width: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section {
+        padding: 50px 15px;
+    }
+
+    .gallery-heading h1 {
+        font-size: 34px;
+    }
+
+    .gallery-heading p {
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 230px;
+    }
+
+    .gallery-modal .carousel-item {
+        padding: 15px 45px 10px;
+    }
+
+    .lightbox-image {
+        max-height: 60vh;
+    }
+
+    .lightbox-caption {
+        padding-top: 12px;
+    }
+
+    .lightbox-caption h2 {
+        font-size: 21px;
+    }
+
+    .lightbox-caption p {
+        font-size: 12px;
+    }
+
+    .gallery-modal .carousel-control-prev,
+    .gallery-modal .carousel-control-next {
+        width: 45px;
+    }
+
+    .gallery-modal .carousel-control-prev-icon,
+    .gallery-modal .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
