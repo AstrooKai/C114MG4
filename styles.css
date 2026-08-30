@@ -899,19 +899,6 @@ footer#footer a {
     font-size: 11px;
 }
 
-.image-attribution {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,.12);
-    color: rgba(255,255,255,.55);
-    font-size: 11px;
-    line-height: 1.6;
-}
-
-.image-attribution a {
-    color: rgba(255,255,255,.8);
-}
-
 @media (max-width: 768px) {
     .visit-planning {
         padding: 30px 20px 24px;
