@@ -6,7 +6,7 @@
     <title>Discover El Nido, Palawan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -468,13 +468,124 @@
             </div>
         </section>
 
-        <section id="plan-your-visit" class="container min-vh-100">
+        <!-- Plan Your Visit Section -->
+        <section id="plan-your-visit" class="visit-planning container" aria-labelledby="plan-visit-heading">
+            <div class="visit-header">
+                <div>
+                    <div class="section-label" id="plan-visit-heading">Plan your visit</div>
+                    <h2>Before you pack the bag or book the flight.</h2>
+                </div>
+                <p class="section-intro">A quick list worth five minutes of your time now, so the rest of the trip doesn't come with any surprises.</p>
+            </div>
 
+            <div class="tip-box" aria-label="Cash advice">
+                <span class="tip-title">Come Prepared</span>
+                <h3>Cash</h3>
+                <p>Most tour operators, tricycles, and small shops in El Nido run on cash only. Bring enough Philippine pesos to cover your stay — ATMs in town are limited and can run out, especially on weekends and holidays.</p>
+            </div>
+
+            <div id="tips" class="accordion-stack">
+                <details class="accordion-item" open>
+                    <summary>Best Time to Visit</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>Nov–May</strong> (dry season): the sweet spot — calm seas, clear water, tours running as scheduled.</li>
+                            <li><strong>Dec–Feb</strong>: peak season, cooler weather, but busiest and priciest — book early.</li>
+                            <li><strong>Mar–May</strong>: hot but quieter, still solid weather.</li>
+                            <li><strong>Jun–Nov</strong>: monsoon season — cheaper, but expect rain and possible tour cancellations. Only recommended for flexible travelers.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>Island-Hopping Tours</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Tours run on 4 standardized routes — Tour A, B, C, D — each covering different lagoons, beaches, and snorkeling spots.</li>
+                            <li>Full-day tours, roughly 9 a.m.–5 p.m., lunch included.</li>
+                            <li>Book directly through a tour operator in town or through your accommodation, ideally a day ahead.</li>
+                            <li>Bring cash for extras (kayak rental, entrance fees not included in the tour price).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>Where to Stay</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>El Nido Town</strong>: most convenient — walk to restaurants, tour offices, and the pier.</li>
+                            <li><strong>Corong-Corong</strong>: quieter beachfront, short tricycle ride from town.</li>
+                            <li><strong>Lio</strong>: upscale, resort-style area.</li>
+                            <li><strong>Nacpan</strong>: remote and low-key, best for travelers who want to escape the crowds.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>What to Bring</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Reef-safe sunscreen</li>
+                            <li>Reef shoes or grippy sandals</li>
+                            <li>A dry bag for phone, cash, and camera on boat tours</li>
+                            <li>Cash in Philippine pesos</li>
+                            <li>Light, quick-dry clothing</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary>Safety Reminders</summary>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Wear a life vest on every boat tour, even strong swimmers.</li>
+                            <li>Book only licensed, reputable tour operators.</li>
+                            <li>Follow your boat crew's instructions on currents and swimming zones.</li>
+                            <li>Check weather advisories — tours can be rescheduled in rough conditions.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
         </section>
 
-        <footer></footer>
-        
     </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-wrap">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="brand">El Nido Travel Guide</div>
+                    <p>A practical, thoughtful starting point for discovering El Nido, Palawan, one island day at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <strong>Explore</strong>
+                        <a href="#overview">Overview</a>
+                        <a href="#plan-your-visit">Plan your visit</a>
+                        <a href="#tips">Tips</a>
+                    </div>
+                    <div>
+                        <strong>Stay connected</strong>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook ↗</a>
+                        <a href="mailto:hello@el-nido-travel-guide.com">Email us</a>
+                    </div>
+                    <div>
+                        <strong>Our group</strong>
+                        <p class="footer-note">Research &amp; writing<br>Design &amp; layout<br>Content &amp; curation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 El Nido Travel Guide</span>
+                <span>Educational project &middot; Image sources: Unsplash</span>
+            </div>
+            <div class="image-attribution">
+                Hero image: <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85" target="_blank" rel="noreferrer">https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85</a>
+            </div>
+        </div>
+    </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
