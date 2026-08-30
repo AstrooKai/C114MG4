@@ -897,6 +897,14 @@ footer#footer a:hover {
     gap: 9px;
 }
 
+.footer-col-credits ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 36px;
+    row-gap: 9px;
+}
+
 .footer-col li {
     font-size: 13.5px;
     color: rgba(255, 255, 255, 0.75);
@@ -933,6 +941,11 @@ footer#footer a:hover {
     .footer-columns {
         flex-direction: column;
         gap: 26px;
+    }
+
+    .footer-col-credits ul {
+        grid-auto-flow: row;
+        grid-template-rows: none;
     }
 
     .footer-bottom {
