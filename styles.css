@@ -1,3 +1,27 @@
+:root {
+    /* Primary Theme Colors */
+    --primary: #0047AB;
+    --primary-rgb: 0, 71, 171;
+    --primary-dark: #003380;
+    --primary-deep: #001f4d;
+    --primary-light: #3373cc;
+    --accent-sky: #8cc3ff;
+    
+    /* Accents & Highlights */
+    --yellow: #f4c95d;
+    --yellow-hover: #e0b445;
+    --orange-cta: #e08a3e;
+    --orange-cta-hover: #c97530;
+    
+    /* Typography & Neutral Tones */
+    --ink: #002b66;
+    --muted: #4e6785;
+    --cream: #f4f8fd;
+    --paper: #ffffff;
+    --line: #d8e5f5;
+    --shadow: 0 18px 45px rgba(0, 71, 171, 0.1);
+}
+
 html{
     overflow-x: hidden;
 }
@@ -11,8 +35,8 @@ p {
 }
 
 #navbar{
-    background-color: rgba(7, 72, 178, 0.6);
-    backdrop-filter: blur(3px);
+    background-color: rgba(var(--primary-rgb), 0.85);
+    backdrop-filter: blur(8px);
 }
 
 .navbar h1,
@@ -43,7 +67,7 @@ p {
 .navbar p{
     font-size: 0.8rem;
     font-weight: 600;
-    color: #1dd2fff6;
+    color: var(--accent-sky);
 }
 
 .nav-link{
@@ -52,7 +76,7 @@ p {
 }
 
 .nav-link:hover{
-    color: #1dd2fff6;
+    color: var(--accent-sky);
 }
 
 .nav-pills .nav-link.active{
@@ -67,7 +91,7 @@ p {
     bottom: 3px;
     width: 100%;
     height: 2px;
-    background-color: #f4c95d;
+    background-color: var(--yellow);
 }
 
 #hero{
@@ -77,7 +101,6 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 40px;
-
 }
 
 #hero::before {
@@ -97,71 +120,106 @@ p {
 #hero-text-container{
     position: relative;
     z-index: 2;
-    transform: translateY(-45px);
-    
+    transform: translateY(-25px);
+    max-width: 900px;
 }
 
 #hero-text-container #eyebrow{
-    color: #f4c95d;
-    letter-spacing: 0.07em;
-    font-size: 0.9rem;
+    color: var(--yellow);
+    letter-spacing: 0.14em;
+    font-size: clamp(0.72rem, 1vw, 0.85rem);
     font-weight: 700;
-    margin-bottom: 0;
-    line-height: 1;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 #hero-text-container #hero-heading{
     color: #fdfaf3;
     margin-top: 0;
-    line-height: 1.05;
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 #hero-text-container #hero-description{
-    color: #fdfaf3;
-    line-height: 1.6;
+    color: rgba(253, 250, 243, 0.92);
+    font-size: clamp(0.88rem, 1.2vw, 1.02rem);
+    line-height: 1.65;
+    max-width: 620px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn.btn-primary-cta{
-    background-color: #e08a3e;
-    border-color: #e08a3e;
+    background-color: var(--orange-cta);
+    border-color: var(--orange-cta);
     color: #fdfaf3;
+    font-size: clamp(0.85rem, 1.05vw, 0.95rem);
+    font-weight: 500;
+    padding: 0.65rem 1.4rem;
+    border-radius: 50rem;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 .btn.btn-primary-cta:hover{
-    background-color: #c97530;
+    background-color: var(--orange-cta-hover);
     border-color: #864711;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(224, 138, 62, 0.35);
 }
 
 .btn.btn-secondary-cta{
-    background-color: #4A7FB5;
-    border-color: #4A7FB5;
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: #fdfaf3;
+    font-size: clamp(0.85rem, 1.05vw, 0.95rem);
+    font-weight: 500;
+    padding: 0.65rem 1.4rem;
+    border-radius: 50rem;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 .btn.btn-secondary-cta:hover{
-    background-color: #4476a8;
-    border-color: #083274;
+    background-color: var(--primary-dark);
+    border-color: var(--primary-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 71, 171, 0.35);
+}
+
+@media (max-width: 768px) {
+    #hero-text-container {
+        transform: translateY(-10px);
+        padding-right: 15px !important;
+    }
 }
 
 .scroll-indicator {
   position: absolute;
-  bottom: 0px;
-  left: 55%;
-  transform: translateX(-60%) translateY(30px);
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: white;
-  opacity: .7;
-  font-size: .9rem;
-  letter-spacing: .15rem;
+  opacity: 0.8;
+  font-size: 0.78rem;
+  letter-spacing: 0.18rem;
   font-weight: 500;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .scroll-line {
   display: block;
   width: 2px;
-  height: 37px;
+  height: 32px;
   margin: 6px auto 0;
   background: white;
+  border-radius: 1px;
 }
 
 h1, h2, h3, h4{
@@ -169,7 +227,7 @@ h1, h2, h3, h4{
 }
 
 .icon, .location, .card-title {
-    color: #245b93 !important;
+    color: var(--primary) !important;
 }
 
 .history-text {
@@ -178,13 +236,51 @@ h1, h2, h3, h4{
 
 #overview{
     position: relative;
-    background-color: #083274;
+    background-color: var(--primary-deep);
+    padding-top: 85px;
+    padding-bottom: 85px;
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+}
+
+@media (max-width: 991px) {
+    #overview {
+        padding-top: 65px;
+        padding-bottom: 65px;
+        padding-right: 1.75rem;
+        padding-left: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #overview {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+}
+
+#carouselWithInterval {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+#carouselWithInterval .carousel-inner {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#carouselWithInterval .carousel-item img {
+    border-radius: 20px;
 }
 
 .carousel-item::before {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: 20px;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.75) 0%,
@@ -200,29 +296,41 @@ h1, h2, h3, h4{
     text-shadow: 0 2px 6px rgb(0, 0, 0, 0.5);
 }
 
-#overview{
-    padding-top: 90px;
-    padding-right: 4rem;
-    padding-left: 4rem;
-}
-
 #island-tours, 
-#activities, #gallery, 
-#plan-your-visit {
-    padding-top: 90px;
-    padding-right: 0;
-    padding-left: 0;
+#activities, 
+.gallery-section, 
+.visit-planning {
+    padding-top: 85px;
+    padding-bottom: 85px;
 }
 
-.carousel-slide,
-.carousel-slide .carousel-inner,
-.carousel-slide .carousel-item{
-    width: 100vw;
-    height: 100vh;
+@media (max-width: 991px) {
+    #island-tours, 
+    #activities, 
+    .gallery-section, 
+    .visit-planning {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}
+
+@media (max-width: 576px) {
+    #island-tours, 
+    #activities, 
+    .gallery-section, 
+    .visit-planning {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
 } 
 
 #overview-eyebrow{
-    color: #f4c95d;
+    color: var(--yellow);
     letter-spacing: 0.07em;
     font-size: 0.9rem;
     font-weight: 200;
@@ -236,7 +344,7 @@ h1, h2, h3, h4{
 }
 
 .caption-heading{
-    color: #f4c95d;
+    color: var(--yellow);
     font-weight: 600;
     z-index: 2;
 }
@@ -247,13 +355,11 @@ h1, h2, h3, h4{
     z-index: 2;
 }
 
-
 #activities > .row:first-child p {
     font-family: Helvetica, Arial, sans-serif;
-    color: rgb(20, 83, 90);
+    color: var(--muted);
     letter-spacing: 0.02em;
 }
-
 
 .activity-card {
     position: relative;
@@ -270,7 +376,6 @@ h1, h2, h3, h4{
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-
 .activity-card::before {
     content: "";
     position: absolute;
@@ -283,7 +388,6 @@ h1, h2, h3, h4{
     z-index: 0;
 }
 
-
 .activity-card::after {
     content: "";
     position: absolute;
@@ -293,25 +397,21 @@ h1, h2, h3, h4{
     z-index: 1;
 }
 
-
 .activity-card:hover,
 .activity-card:focus-within {
     transform: translateY(-6px);
     box-shadow: 0 14px 30px rgba(15, 61, 62, 0.32);
 }
 
-
 .activity-card:hover::before,
 .activity-card:focus-within::before {
     transform: scale(1.09);
 }
 
-
 .activity-card:hover::after,
 .activity-card:focus-within::after {
     background: linear-gradient(180deg, rgba(15, 61, 62, 0.15) 0%, rgba(15, 61, 62, 0.72) 55%, rgba(8, 43, 44, 0.94) 100%);
 }
-
 
 .card-content {
     position: relative;
@@ -324,7 +424,6 @@ h1, h2, h3, h4{
     color: #fff;
     outline: none;
 }
-
 
 .activity-card i {
     font-size: 1.5rem;
@@ -341,14 +440,12 @@ h1, h2, h3, h4{
     transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
 }
 
-
 .activity-card:hover i,
 .activity-card:focus-within i {
     transform: translateY(-3px) rotate(-6deg);
     background: rgb(255, 122, 90);
     color: #fff;
 }
-
 
 .activity-card h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -358,7 +455,6 @@ h1, h2, h3, h4{
     position: relative;
     display: inline-block;
 }
-
 
 .activity-card h3::after {
     content: "";
@@ -370,12 +466,10 @@ h1, h2, h3, h4{
     margin-top: 2px;
 }
 
-
 .activity-card:hover h3::after,
 .activity-card:focus-within h3::after {
     width: 100%;
 }
-
 
 .activity-card p {
     font-size: 0.85rem;
@@ -386,19 +480,16 @@ h1, h2, h3, h4{
     transition: max-height 0.4s ease, opacity 0.3s ease 0.05s;
 }
 
-
 .activity-card:hover p,
 .activity-card:focus-within p {
     max-height: 4.5rem;
     opacity: 1;
 }
 
-
 .card-content:focus-visible {
     box-shadow: inset 0 0 0 3px rgb(255, 122, 90);
     border-radius: 14px;
 }
-
 
 @media (prefers-reduced-motion: reduce) {
     .activity-card,
@@ -412,8 +503,7 @@ h1, h2, h3, h4{
 }
 
 .gallery-section {
-    min-height: 100vh;
-    padding: 80px 20px;
+    position: relative;
 }
 
 .gallery-heading {
@@ -650,23 +740,11 @@ h1, h2, h3, h4{
     }
 }
 
-:root {
-    --ink: #153d43;
-    --muted: #668083;
-    --cream: #f6f1e8;
-    --paper: #fffdf8;
-    --coral: #e97d60;
-    --coral-dark: #bd5c47;
-    --teal: #1f6970;
-    --line: #dce6df;
-    --yellow: #f3c765;
-    --shadow: 0 18px 45px rgba(21, 61, 67, .1);
-}
-
+/* ==========================================================================
+   Visit Planning Section
+   ========================================================================== */
 .visit-planning {
     position: relative;
-    padding-top: 90px;
-    padding-bottom: 80px;
 }
 
 .visit-header {
@@ -686,7 +764,7 @@ h1, h2, h3, h4{
     align-items: center;
     gap: 16px;
     margin-bottom: 12px;
-    color: var(--teal);
+    color: var(--primary);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: .16em;
@@ -697,7 +775,7 @@ h1, h2, h3, h4{
     content: "";
     width: 52px;
     height: 1px;
-    background: var(--coral);
+    background: var(--yellow);
 }
 
 .visit-planning .section-intro {
@@ -718,16 +796,16 @@ h1, h2, h3, h4{
     width: 100%;
     padding: 26px 26px 22px;
     margin-bottom: 0;
-    background: linear-gradient(135deg, #fffdf8, #f8efe2);
-    border: 1px solid #edd9ba;
+    background: linear-gradient(135deg, var(--paper), var(--cream));
+    border: 1px solid var(--line);
     border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(21, 61, 67, .04);
+    box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.06);
 }
 
 .tip-box .tip-title {
     display: inline-block;
     margin-bottom: 8px;
-    color: var(--teal);
+    color: var(--primary);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: .16em;
@@ -754,17 +832,17 @@ h1, h2, h3, h4{
 }
 
 .accordion-stack .accordion-item {
-    background: #ffffff;
-    border: 1px solid rgba(21, 61, 67, 0.1);
+    background: var(--paper);
+    border: 1px solid rgba(var(--primary-rgb), 0.12);
     border-radius: 14px !important;
-    box-shadow: 0 4px 16px rgba(21, 61, 67, 0.03);
+    box-shadow: 0 4px 16px rgba(var(--primary-rgb), 0.04);
     overflow: hidden;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .accordion-stack .accordion-item:hover {
-    border-color: rgba(21, 61, 67, 0.2);
-    box-shadow: 0 6px 20px rgba(21, 61, 67, 0.06);
+    border-color: rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.08);
 }
 
 .accordion-stack .accordion-button {
@@ -816,26 +894,19 @@ h1, h2, h3, h4{
     }
 }
 
-footer#footer {
-    padding: 58px 0 28px;
-    background: linear-gradient(180deg, #12383e 0%, #0d2d31 100%);
-    color: #fff;
-}
-
-footer#footer a {
-    text-decoration: none;
-}
-
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
 footer#footer {
     padding: 70px 0 32px;
-    background: linear-gradient(180deg, #12383e 0%, #0d2d31 100%);
+    background: var(--primary-deep);
     color: #fff;
     width: 100%;
 }
 
 footer#footer a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.75);
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -850,7 +921,7 @@ footer#footer a:hover {
     align-items: flex-start;
     gap: 48px;
     padding-bottom: 45px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-brand {
@@ -867,7 +938,7 @@ footer#footer a:hover {
 
 .footer-brand p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 13.5px;
     line-height: 1.7;
 }
@@ -914,7 +985,7 @@ footer#footer a:hover {
 
 .footer-col li {
     font-size: 13.5px;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-col li a {
@@ -927,7 +998,7 @@ footer#footer a:hover {
     align-items: center;
     gap: 20px;
     padding-top: 25px;
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
 }
 
@@ -961,11 +1032,11 @@ footer#footer a:hover {
    Photo Credits Modal Styles
    ========================================================================== */
 .credits-modal-content {
-    background: #153d43;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--primary-dark);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
     padding: 12px 14px;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 24px 48px rgba(var(--primary-rgb), 0.5);
 }
 
 .credits-list-group {
@@ -979,8 +1050,8 @@ footer#footer a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     color: #fff;
     text-decoration: none;
@@ -988,8 +1059,8 @@ footer#footer a:hover {
 }
 
 .credit-item:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.3);
     color: var(--yellow);
     transform: translateY(-1px);
 }
@@ -1007,12 +1078,12 @@ footer#footer a:hover {
 
 .credit-platform {
     font-size: 11.5px;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .credit-item i {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -1021,20 +1092,22 @@ footer#footer a:hover {
     transform: translate(2px, -2px);
 }
 
-/* Island & Tours Section Styling */
+/* ==========================================================================
+   Island & Tours Section Styling
+   ========================================================================== */
 .tour-card {
-    background-color: #fffdf8;
-    border: 1px solid rgba(21, 61, 67, 0.08);
+    background-color: var(--paper);
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(21, 61, 67, 0.04);
+    box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tour-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(21, 61, 67, 0.1);
-    border-color: rgba(21, 61, 67, 0.15);
+    box-shadow: 0 16px 36px rgba(var(--primary-rgb), 0.15);
+    border-color: rgba(var(--primary-rgb), 0.25);
 }
 
 .tour-image-wrapper {
@@ -1050,12 +1123,12 @@ footer#footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #668083;
+    color: var(--muted);
     font-size: 0.9rem;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;
-    background: linear-gradient(135deg, rgba(31, 105, 112, 0.05) 0%, rgba(21, 61, 67, 0.08) 100%);
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05) 0%, rgba(var(--primary-rgb), 0.1) 100%);
 }
 
 .tour-img {
@@ -1071,7 +1144,7 @@ footer#footer a:hover {
 }
 
 .tour-caption-box {
-    border-left: 3px solid #e97d60;
+    border-left: 3px solid var(--primary);
     padding-left: 12px;
     margin-bottom: 16px;
 }
@@ -1081,13 +1154,13 @@ footer#footer a:hover {
     font-style: italic;
     font-size: 0.95rem;
     line-height: 1.5;
-    color: #153d43;
+    color: var(--primary-dark);
 }
 
 .tour-description {
     font-size: 0.88rem;
     line-height: 1.6;
-    color: #668083;
+    color: var(--muted);
 }
 
 #island-tours .card {

@@ -46,30 +46,31 @@
     </header>
     <main>
         <section id="hero" class="container-fluid min-vh-100 position-relative">
-            <div class="container position-absolute bottom-0 start-0 pb-2 ps-3 pe-2 ps-lg-5 ms-0 ms-lg-5" id="hero-text-container">
+            <div class="container position-absolute bottom-0 start-0 pb-3 ps-3 pe-3 ps-lg-5 ms-0 ms-lg-4" id="hero-text-container">
                 <h5 id="eyebrow" class="eyebrow">PALAWAN, PHILIPPINES</h5>
-                <h1 id="hero-heading" class="display-2 display-lg-3 fs-sm-1 mb-0">
+                <h1 id="hero-heading" class="mb-2">
                     El Nido, One of a kind
                 </h1>
-                <p id="hero-description" class="col-12 col-lg-8 fs-5 fs-lg-6 pb-2">
+                <p id="hero-description" class="pb-2">
                     Tucked at the northern tip of Palawan, El Nido is the gateway to
                     the Bacuit Archipelago — a scattering of limestone islands, hidden
                     lagoons, and powder-white beaches that has made it one of the most
                     celebrated destinations in the Philippines and Southeast Asia. 
                     El Nido's been ready for you. Have you been ready for it?
                 </p>
-                <div class="d-flex gap-2 gap-lg-3 pb-5">
-                    <a class="btn btn-primary-cta fs-5 fs-lg-4 px-3 py-2 px-lg-4 py-lg-3" href="#overview" role="button">Explore El Nido</a>
-                    <a class="btn btn-secondary-cta fs-5 fs-lg-4 px-3 py-2 px-lg-4 py-lg-3" href="#plan-your-visit" role="button">Plan Your Visit</a>
+                <div class="d-flex flex-wrap gap-2 gap-md-3 pb-4">
+                    <a class="btn btn-primary-cta" href="#overview" role="button">Explore El Nido</a>
+                    <a class="btn btn-secondary-cta" href="#plan-your-visit" role="button">Plan Your Visit</a>
                 </div>
-                <div class="scroll-indicator">
-                    <span class="scroll-text">SCROLL DOWN</span>
-                    <span class="scroll-line"></span>
-                </div>
+            </div>
+
+            <div class="scroll-indicator d-none d-md-flex">
+                <span class="scroll-text">SCROLL DOWN</span>
+                <span class="scroll-line"></span>
             </div>
         </section>
 
-        <section id="overview" class="container-fluid min-vh-100">
+        <section id="overview" class="container-fluid">
             <div class="row d-flex flex-column pb-2">
                 <div class="col d-flex flex-column justify-content-center">
                     <h6 class="ps-4 d-flex justify-content-center" id="overview-eyebrow">OVERVIEW</h6>
@@ -78,7 +79,7 @@
             </div>
             <div class="row">
                 <div class="col-12 pt-lg-3 pt-sm-2 d-flex flex-column justify-content-center">
-                    <div id="carouselWithInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselWithInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <img src="images/overview-picture-1.jpg" class="d-block w-100" alt="90,321 Hectares" style="height: 500px; object-fit: cover;">
@@ -92,7 +93,7 @@
                                 <img src="images/overview-picture-2.jpg" class="d-block w-100" alt="The Nest" style="height: 500px; object-fit: cover;">
                                 <div class="carousel-caption container d-flex flex-column ps-2 pe-2 ps-lg-5" style="left: 15px;">
                                     <h1 class="caption-heading d-flex col-lg-12">The Nest</h1>
-                                    <h5 class="caption-description d-flex col-12 col-lg-5" style="text-align: left;">In year 1954, El Nido got its name that year — Spanish for "the nest," a nod to the swiftlet nests tucked into its limestone cliffs.</h5>
+                                    <h5 class="caption-description d-flex col-12 col-lg-5" style="text-align: left;">In year 1954, El Nido got its name that year, Spanish for "the nest," a nod to the swiftlet nests tucked into its limestone cliffs.</h5>
                                 </div>
                             </div>
 
@@ -126,11 +127,11 @@
             </div>
         </section>
 
-        <section id="island-tours" class="container min-vh-100">
+        <section id="island-tours" class="container">
             <div class="row d-flex flex-column pb-4">
                 <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-                    <h2 class="mb-2" style="color: #153d43; font-family: 'Fraunces', serif;">Islands & Tourist Attractions</h2>
-                    <p class="col-12 col-lg-8" style="color: #668083; font-size: 15px; font-family: 'Poppins', sans-serif;">Explore the breathtaking lagoons, pristine white sand beaches, and unique sandbars of El Nido's Bacuit Archipelago.</p>
+                    <h2 class="mb-2" style="color: #0047AB; font-family: 'Fraunces', serif;">Islands & Tourist Attractions</h2>
+                    <p class="col-12 col-lg-8" style="color: #4e6785; font-size: 15px; font-family: 'Poppins', sans-serif;">Explore the breathtaking lagoons, pristine white sand beaches, and unique sandbars of El Nido's Bacuit Archipelago.</p>
                 </div>
             </div>
             <div class="row g-4">
@@ -140,7 +141,7 @@
                             <img src="images/island-big-lagoon.jpg" class="card-img-top tour-img" alt="Big Lagoon">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 mb-3" style="color: #153d43; font-family: 'Fraunces', serif; font-weight: 600;">Big Lagoon</h3>
+                            <h3 class="card-title h5 mb-3" style="color: #0047AB; font-family: 'Fraunces', serif; font-weight: 600;">Big Lagoon</h3>
                             <div class="tour-caption-box">
                                 <p class="tour-caption-text">"Discover the beauty of Big Lagoon emerald waters, towering cliffs, and pure tranquility in El Nido."</p>
                             </div>
@@ -155,7 +156,7 @@
                             <img src="/images/island-small-lagoon.jpg" class="card-img-top tour-img" alt="Small Lagoon">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 mb-3" style="color: #153d43; font-family: 'Fraunces', serif; font-weight: 600;">Small Lagoon</h3>
+                            <h3 class="card-title h5 mb-3" style="color: #0047AB; font-family: 'Fraunces', serif; font-weight: 600;">Small Lagoon</h3>
                             <div class="tour-caption-box">
                                 <p class="tour-caption-text">"Discover the hidden beauty of Small Lagoon, where caves and turquoise waters await."</p>
                             </div>
@@ -170,7 +171,7 @@
                             <img src="images/nacpan-beach.jpg" class="card-img-top tour-img" alt="Nacpan Beach">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 mb-3" style="color: #153d43; font-family: 'Fraunces', serif; font-weight: 600;">Nacpan Beach</h3>
+                            <h3 class="card-title h5 mb-3" style="color: #0047AB; font-family: 'Fraunces', serif; font-weight: 600;">Nacpan Beach</h3>
                             <div class="tour-caption-box">
                                 <p class="tour-caption-text">"Nacpan Beach is a tropical paradise of white sand, coconut trees, and turquoise seas."</p>
                             </div>
@@ -185,7 +186,7 @@
                             <img src="images/island-seven.jpg" class="card-img-top tour-img" alt="Seven Commandos Beach">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 mb-3" style="color: #153d43; font-family: 'Fraunces', serif; font-weight: 600;">Seven Commandos Beach</h3>
+                            <h3 class="card-title h5 mb-3" style="color: #0047AB; font-family: 'Fraunces', serif; font-weight: 600;">Seven Commandos Beach</h3>
                             <div class="tour-caption-box">
                                 <p class="tour-caption-text">"A tropical paradise with white sand, turquoise waters, and swaying coconut trees. A perfect place to relax, swim, and enjoy."</p>
                             </div>
@@ -200,7 +201,7 @@
                             <img src="images/snake-island.webp" class="card-img-top tour-img" alt="Snake Island">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 mb-3" style="color: #153d43; font-family: 'Fraunces', serif; font-weight: 600;">Snake Island</h3>
+                            <h3 class="card-title h5 mb-3" style="color: #0047AB; font-family: 'Fraunces', serif; font-weight: 600;">Snake Island</h3>
                             <div class="tour-caption-box">
                                 <p class="tour-caption-text">"Is famous for its unique winding sandbar that appears during low tide. Surrounded by clear turquoise waters..."</p>
                             </div>
@@ -215,7 +216,7 @@
                             <img src="images/hidden-beach.webp" class="card-img-top tour-img" alt="Hidden Beach">
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h3 class="card-title h5 mb-3" style="color: #153d43; font-family: 'Fraunces', serif; font-weight: 600;">Hidden Beach</h3>
+                            <h3 class="card-title h5 mb-3" style="color: #0047AB; font-family: 'Fraunces', serif; font-weight: 600;">Hidden Beach</h3>
                             <div class="tour-caption-box">
                                 <p class="tour-caption-text">"A peaceful white-sand cove surrounded by majestic limestone cliffs. Its clear waters are perfect for swimming and snorkeling."</p>
                             </div>
@@ -226,7 +227,7 @@
             </div>
         </section>
 
-        <section id="activities" class="container min-vh-100 py-4">
+        <section id="activities" class="container">
             <div class="row d-flex flex-column pb-4">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <h1 class="mb-0">Activities & Things to Do</h1>
